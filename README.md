@@ -2,6 +2,8 @@
 
 A little movement. A little more outside.
 
+[Live Demo Site](https://mso-docs.github.io/OutFit-Fitness-Trainer/)
+
 OutFit is a responsive, local fitness-planning prototype for the **Touch Grass** hackathon. It helps an adult choose a realistic goal, preview and accept a seven-day plan, record activity and recovery, and review an adjustment. Local Ollama selects activities within deterministic policy limits. A validated fallback keeps the core loop working without a model.
 
 ![OutFit Today screen](docs/screenshots/today-desktop.png)
