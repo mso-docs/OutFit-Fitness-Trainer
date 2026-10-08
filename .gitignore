@@ -1,0 +1,27 @@
+node_modules/
+dist/
+data/
+.env*
+*.env
+!.env.example
+test-results/
+playwright-report/
+*.db
+*.db-shm
+*.db-wal
+
+# Private machine settings, exports and credentials
+.aws/
+.codex/
+.agents/
+.vscode/
+.idea/
+exports/
+backups/
+*.log
+*.pem
+*.key
+*.p12
+*.pfx
+*.bak
+.DS_Store
