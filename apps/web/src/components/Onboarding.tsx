@@ -130,6 +130,9 @@ export function Onboarding({
         </span>
         OutFit<span className="brand-dot">.</span>
       </a>
+      <a className="onboard-help" href="./help.html">
+        Help & documentation
+      </a>
       <div className="onboard-layout">
         <aside className="onboard-aside">
           <span className="eyebrow">

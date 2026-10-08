@@ -1,5 +1,9 @@
 # OutFit prototype verification
 
+## Separate Help page
+
+The app and documentation build as separate `index.html` and `help.html` entries in both deployment modes. Two targeted desktop/mobile Pages browser checks passed under `/OutFit/`, covering direct access before onboarding, topic navigation/reload, return links, accessibility and absence of API/AI requests. Typecheck, both builds, lint and the public-file scanner passed; the scanner checked 60 candidate files plus history and build assets with zero findings. Wide Markdown tables and code blocks support keyboard focus.
+
 Date: October 8, 2026. This report describes actual automated checks and separates external/human checks that remain outstanding. OutFit is the project; Touch Grass is the hackathon theme.
 
 ## Environment and checks

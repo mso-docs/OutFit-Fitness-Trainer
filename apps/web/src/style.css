@@ -2015,3 +2015,103 @@ dialog {
   font-size: 1.1rem;
   margin: 16px 0 10px;
 }
+
+.help-shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+.help-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.help-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 28px;
+}
+.help-nav {
+  align-self: start;
+  position: sticky;
+  top: 24px;
+  display: grid;
+  gap: 8px;
+}
+.help-nav h2 {
+  font-size: 1rem;
+}
+.help-nav a {
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.help-nav a[aria-current="page"] {
+  background: #dfe8d8;
+  font-weight: 700;
+}
+.help-document {
+  min-width: 0;
+  line-height: 1.75;
+}
+.help-document h1 {
+  font-size: 2rem;
+}
+.help-document h2 {
+  margin-top: 32px;
+}
+.help-document ul,
+.help-document ol {
+  padding-left: 24px;
+}
+.help-document li {
+  margin: 8px 0;
+}
+.help-document pre {
+  max-width: 100%;
+  overflow: auto;
+  background: #f0f3eb;
+  padding: 16px;
+  border-radius: 8px;
+}
+.help-document table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+.help-document td,
+.help-document th {
+  border: 1px solid #bac5b0;
+  padding: 10px;
+  vertical-align: top;
+}
+.help-document p,
+.help-document a,
+.help-document code {
+  overflow-wrap: anywhere;
+}
+.onboard-help {
+  display: inline-block;
+  margin: 16px 0;
+}
+@media (max-width: 700px) {
+  .help-shell {
+    padding: 24px 16px;
+  }
+  .help-layout {
+    grid-template-columns: 1fr;
+  }
+  .help-nav {
+    position: static;
+  }
+  .help-header .button {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .help-document h1 {
+    font-size: 1.7rem;
+  }
+}

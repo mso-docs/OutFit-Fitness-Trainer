@@ -150,3 +150,5 @@ Run `npm run check:public` before publishing. Private env copies, databases, exp
 The **browser edition** runs without an OutFit server: `npm run build:pages` then `npm run preview:pages`. It stores data in the browser and calls the user's Ollama directly, defaulting to `http://127.0.0.1:11434`. Settings supports a trusted custom endpoint. The existing Node/SQLite server mode remains available.
 
 A manual GitHub Actions workflow builds/deploys only static assets. Ollama must allow the exact Pages origin and the browser may require local-network permission. See [release audit, Pages setup and browser privacy limits](docs/public-release.md).
+
+The Pages root opens OutFit. A separate `help.html` page renders the user guide, health integration notes, deployment instructions and MVP specification. Help links are available before onboarding and in the app footer; documentation works without a profile or AI connection.

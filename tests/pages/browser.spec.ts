@@ -152,3 +152,59 @@ test("browser uses direct Ollama for validated planning and Markdown trainer cha
   await expect(page.locator(".chat-markdown strong")).toHaveText("Small steps");
   await expect(page.locator(".chat-markdown em")).toHaveText("steady habits");
 });
+
+test("separate Help page works without onboarding or AI and links back to the app", async ({
+  page,
+}) => {
+  const aiRequests: string[] = [];
+  page.on("request", (r) => {
+    if (
+      r.url().includes(":11434") ||
+      new URL(r.url()).pathname.startsWith("/api/v1")
+    )
+      aiRequests.push(r.url());
+  });
+  await page.goto("help.html");
+  await expect(
+    page.getByRole("heading", { name: "OutFit Help", exact: true }),
+  ).toBeVisible();
+  await page
+    .getByRole("navigation", { name: "Help topics" })
+    .getByRole("link", { name: "Health integrations", exact: true })
+    .click();
+  await expect(page).toHaveURL(/help\.html\?doc=integrations$/);
+  await expect(
+    page.getByRole("heading", {
+      name: "Health data and trainer prototype",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await page.reload();
+  await expect(
+    page.getByRole("heading", {
+      name: "Health data and trainer prototype",
+      exact: true,
+    }),
+  ).toBeVisible();
+  expect(
+    (
+      await new AxeBuilder({ page })
+        .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
+        .analyze()
+    ).violations,
+  ).toEqual([]);
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  expect(aiRequests).toEqual([]);
+  await page.getByRole("link", { name: "Back to OutFit", exact: true }).click();
+  await expect(page.getByLabel("I am 18 or older.")).toBeVisible();
+  await page
+    .getByRole("link", { name: "Help & documentation", exact: true })
+    .click();
+  await expect(
+    page.getByRole("heading", { name: "OutFit Help", exact: true }),
+  ).toBeVisible();
+});

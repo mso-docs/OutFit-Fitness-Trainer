@@ -30,6 +30,8 @@ Ollama defaults to **`http://127.0.0.1:11434`**. Settings lets users change that
 
 ### GitHub Pages setup
 
+The site contains two entries: `/OutFit/` opens the app and `/OutFit/help.html` opens documentation. Help topics have shareable query links, such as `help.html?doc=integrations`. The Help page renders selected repository Markdown files during the build and needs no API or Ollama connection.
+
 1. Push reviewed source to the intended GitHub repository.
 2. In repository Settings → Pages, choose **GitHub Actions** as the source.
 3. Run **Build and deploy browser edition** from Actions. The workflow builds `dist/pages` and uploads only that directory. It does not upload `.env`, SQLite, exports, test artifacts or Node server code. The relative Vite base supports project paths such as `/OutFit/`.

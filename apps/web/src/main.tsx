@@ -1156,7 +1156,10 @@ function App() {
           )}
           <footer className="app-footer">
             <span>OutFit · Make room for outside.</span>
-            <span>General fitness guidance for adults.</span>
+            <span>
+              <a href="./help.html">Help & documentation</a> · General fitness
+              guidance for adults.
+            </span>
           </footer>
         </main>
       </div>
