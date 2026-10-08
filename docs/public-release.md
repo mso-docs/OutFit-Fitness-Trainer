@@ -14,7 +14,7 @@ The candidate files, Git blob history and generated shipping assets are checked 
 4. Choose a repository license before presenting this as an open-source release. No license was selected automatically.
 5. Enable GitHub secret scanning/push protection where available and review alerts. If a real credential ever reached public history, rotate/revoke it; removing the visible file alone is insufficient. Review any history cleanup before rewriting shared commits.
 
-Nothing has been pushed or published by this work. The Pages workflow is manually triggered only.
+The Pages workflow deploys on pushes to `main` and also supports manual runs. Local edits must be committed and pushed before GitHub can build them.
 
 ## Browser edition
 
