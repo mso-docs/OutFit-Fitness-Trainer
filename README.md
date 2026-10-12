@@ -14,6 +14,10 @@ OutFit is a responsive, local fitness-planning prototype for the **Touch Grass**
 
 [Watch the OutFit hackathon demo on YouTube](https://youtu.be/HlDxsYxbqtw).
 
+## Hackathon writeup
+
+[Read OutFit: A Little Movement. A Little More Outside. on DEV](https://dev.to/mackenzie-techdocs/outfit-a-little-movement-a-little-more-outside-den).
+
 ## Run locally
 
 Use **Node 24 LTS** and npm. From this repository:
