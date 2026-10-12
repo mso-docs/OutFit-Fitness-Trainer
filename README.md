@@ -1,5 +1,7 @@
 # OutFit
 
+Licensed under the [MIT License](LICENSE).
+
 A little movement. A little more outside.
 
 [Live Demo Site](https://mso-docs.github.io/OutFit-Fitness-Trainer/)
